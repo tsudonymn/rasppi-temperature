@@ -7,9 +7,9 @@ import Adafruit_DHT
 
 sensor = Adafruit_DHT.DHT11
 pin = 4
-username = 'tsudonymn'
-api_key = '***REMOVED***'
-stream_token = '***REMOVED***'
+username = ''
+api_key = ''
+stream_token = ''
 
 py.sign_in(username, api_key)
 
