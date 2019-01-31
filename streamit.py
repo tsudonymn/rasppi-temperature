@@ -1,15 +1,20 @@
-import plotly.plotly as py
-from plotly.graph_objs import Scatter, Layout, Figure
 import time
 import datetime
 import sys
+
+import configparser
+import plotly.plotly as py
+from plotly.graph_objs import Scatter, Layout, Figure
 import Adafruit_DHT
+
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 sensor = Adafruit_DHT.DHT11
 pin = 4
-username = ''
-api_key = ''
-stream_token = ''
+username = config['DEFAULT']['username']
+api_key = config['DEFAULT']['api_key']
+stream_token = config['DEFAULT']['stream_token']
 
 py.sign_in(username, api_key)
 
